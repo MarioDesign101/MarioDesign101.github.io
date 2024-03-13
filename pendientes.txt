@@ -1,0 +1,12 @@
+Pendientes:
+- meta keywords
+- meta descritpion
+- meta category
+- meta itemprop descritpion
+- link rel icon
+- google analytics
+- Texto
+- numero de contacto WA
+- Fotos
+- php
+- javascript

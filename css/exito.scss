@@ -1,0 +1,66 @@
+.exito {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin: auto;
+    position: relative;
+    .barra-color {
+        width: 100%;
+        height: 10px;
+        background: rgba(3, 255, 11, 0.556);
+    }
+    .checklist {
+        position: absolute;
+        top: 30px;
+        right: 50px;
+        font-size: 2.5em;
+        color: rgba(3, 255, 11, 0.956);
+        transform: rotate(-10deg);
+    }
+    a {
+        color: #ffff;
+        transition: all .3s;
+        &:hover {
+            color: rgba(255, 255, 255, .4);
+        }
+    }
+}
+
+@media screen and (min-width: 360px) {
+    .exito {
+        .checklist {
+            top: 80px;
+            right: 65px;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .exito {
+        height: 100vh;
+        .checklist {
+            top: 240px;
+            right: 65px;
+            font-size: 3.5em;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+}
+
+
+@media screen and (min-width: 1600px) {
+.exito {
+    .checklist {
+        top: 240px;
+        right: 35px;
+        font-size: 3.5em;
+    }
+}
+}

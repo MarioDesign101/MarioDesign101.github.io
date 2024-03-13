@@ -1,0 +1,606 @@
+<!-- 
+  require 'config/database.php';
+require 'config/config.php';
+$db = new Database();
+$con = $db->conectar();
+
+$sql = $con-> prepare("SELECT id, nombre, precio, predescripcion FROM productos WHERE activo=1");
+$sql->execute();
+$resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
+
+ -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="content-script-type" content="text/javascript">
+    <meta http-equiv="content-style-type" content="text/css">
+    <meta http-equiv="cache-control" content="public">
+    <meta http-equiv="cache-control" content="max-age=0">
+    <meta http-equiv="expires" content="0"> <!--Fri, 18 Jul 2014 1:00:00 GMT-->
+    <meta http-equiv="expires" content="Thu, 31 Dic 2024 1:00:00 GMT">
+    <meta http-equiv="Set-Cookie" content="name=data; path=/; expires=Thu, 31-Dic-2024 1:00:00 GMT">
+    <meta http-equiv="refresh" content="3000"> <!-- "10; https://www.google.com.mx/" También podemos usar la refreshetiqueta meta para redirigir una página a un destino específico. El siguiente ejemplo nos llevará a example.com después de ver la página durante 5 segundos.    -->
+    <meta http-equiv="X-UA-Compatible" content="IE-Edge">
+    <meta name="theme-color" content="#000"> <!--Color del texto fuera del meta viewport-->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000"> <!--Color de la pantalla fuera del meta viewport-->
+    <meta name="distribuition" content="global">
+    <meta name="robots" content="index, follow, all, max-snippet:-1"> <!--Index (se toma por defecto), Follow (se toma por defecto), Noindex (se tiene que especificar cuando no queremos que indexe una página), Nofollow (se tiene que especificar cuando no queremos que siga los enlaces de una página)-->
+    <meta name="googlebot" content="index, follow, all">
+    <meta name="google" content="translate">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="DISPERLUB - Lubricante de alto rendimiento automotriz e indsutrial"> <!-- Atributos title, description y url y type || título de tu página o tu post-->
+    <meta property="og:description" content="Lubricante de alto rendimiento  automotriz e indsutrial">
+    <meta property="og:image" content="">
+    <meta property="og:video" content="">
+    <meta property="og:site_name" content="DISPERLUB - Lubricante de alto rendimiento" />
+    <!-- Open Graph data -->
+    <meta name="revisit-after" content="7 days">
+    <meta name="keywords" content="Lubricante de alto rendimiento automotriz, Lubricante de alto rendimiento industrial, Castrol, Mobil, Chevron"> <!--maximo 3-->
+    <meta name="description" content="DISPERLUB. Una empresa 100% mexicana distribuidora mayorista de aceites lubricantes automotrices e indsutriales de excelente calidad a precios competitivos. "> <!--Descripcion de 150m- 160 caracteres-->
+    <meta name="copyright" content="DISPERLUB">
+    <meta name="author" content="Mario Design"> <!--El nombre del autor-->
+    <meta name="lenguage" content="spanish"> 
+    <meta name="audience" content="all">
+    <meta name="category" content=""> 
+    <meta itemprop="name" content="DISPERLUB - Lubricante de alto rendimiento"> <!--importante. Datos estructurados: fragmentos destacados, breadcrumbs, enlaces de sitio, tarjetas de redes sociales. https://www.google.com/webmasters/markup-helper/u/0/
+                                  https://developers.google.com/search/docs/appearance/structured-data/generate-structured-data-with-javascript?hl=es // https://developers.google.com/search/docs/appearance/structured-data/product?hl=es#product-review-page-example 
+                                  // https://developers.google.com/search/docs/appearance/structured-data/product?hl=es#pricing-example // https://developers.google.com/search/docs/appearance/structured-data/product?hl=es#product-reviews-->
+    <meta itemprop="description" content="DISPERLUB. Una empresa 100% mexicana distribuidora mayorista de aceites lubricantes automotrices e indsutriales de excelente calidad a precios competitivos.">
+    <meta itemprop="image" content=""> <!--https://developer.mozilla.org/es/docs/Web/HTML/Global_attributes/itemprop-->
+    <link rel="icon" href="img/Disperlub - lubricantes de alto rendimiento.png" type="image/x-icon">
+    <link rel="canonical" href="https://www.disperclub.com.mx"> <!--ENLACE OPCIONAL-->
+    <!-- <base href="https://www.mariodesign.com/"> -->
+    <title>DISPERLUB - Lubricante de alto rendimiento</title>
+    <link rel="stylesheet" href="css/estilos.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/glider-js@1.7.8/glider.min.css" rel="stylesheet">     
+</head>
+<!-- Google tag (gtag.js) -->
+<body>
+<div class="container">
+  <a href="https://api.whatsapp.com/send?phone=5544866418" class="btn-wsp" target="_blank">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+</div>
+  <header class="header" id="header">
+    <a href="#" class="logo max-titulo"><b class="water"><div class="triangulo"></div></b>ISPERLUB</a>
+    <div class="toggle" id="toggle"><div class="line"></div></div>
+    <nav class="navbar" id="navbar">
+     <ul>
+      <li>
+        <a href="#banner"> Inicio</a>
+    </li>
+         <li>
+             <a href="#AboutUs"> Conocenos</a>
+         </li>
+         <li>
+             <a href="#service"> Catalogo</a>
+         </li>
+         <li>
+             <a href="#catalogo"> Servicios</a>
+         </li>
+         <li>
+             <a href="#contact"> Contacto</a>
+         </li>
+     </ul>
+    </nav>
+  </div>
+  </header>
+
+<main>
+<section id="banner">
+  <div class="container">
+    <div id="particles-js"></div>
+    <div class="container container--flex">
+      <div class="column column--50">
+        <div class="banner__txt">
+          <h1 class="max-titulo">Lubricante de alto rendimiento para todo tipo de motores <b class="water max-titulo"><div class="triangulo"></div><strong class="empres">ISPERLUB</strong></b></h1>
+          <h2 class="titulo">(Aquí irá un slogan de la empresa que explique su uso y lo eficiente que es)</h2>
+          <div class="banner__txt--botton">
+            <a href="#contact">Contactanos</a>
+          </div>
+        </div>
+      </div>
+      <div class="column column--50">
+        <div class="banner__img">
+          <div class="banner--slider" id="slider">
+            <div class="slider-item">
+              <figure>
+                <img src="img/Disperlub - aceite lubricante para motores.jpg" alt="Poner descripcion" loading="lazy">
+                <figcaption class="texto"><strong>(Descripicón o títul del aceite y su uso industrial)</strong></figcaption>
+              </figure>
+            </div>
+            <div class="slider-item">
+              <figure>
+                <img src="img/Disperlub - Fabrica de lubricantes para motores.jpg" alt="Poner descripcion" loading="lazy">
+                <figcaption class="texto"><strong>(Descripicón o títul del aceite y su uso industrial)</strong></figcaption>
+              </figure>
+            </div>
+            <div class="slider-item">
+              <figure>
+                <img src="img/Disperlub - Lubricante para motores.jpg" alt="Poner descripcion" loading="lazy">
+                <figcaption class="texto"><strong>(Descripicón o títul del aceite y su uso industrial)</strong></figcaption>
+              </figure>
+            </div>
+            <div class="slider-item">
+              <figure>
+                <img src="img/Disperlub - motores.jpg" alt="Poner descripcion" loading="lazy">
+                <figcaption class="texto"><strong>(Descripicón o títul del aceite y su uso industrial)</strong></figcaption>
+              </figure>
+            </div>
+            <div class="slider-item">
+              <figure>
+                <img src="img/Disperlub - Lubricantes para motores.jpg" alt="Poner descripcion" loading="lazy">
+                <figcaption class="texto"><strong>(Descripicón o títul del aceite y su uso industrial)</strong></figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="btn-left"><i class="bi bi-caret-left"></i></div>
+          <div class="btn-right"><i class="bi bi-caret-right"></i></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="AboutUs">
+  <div class="container">
+    <h2 class="titulo">¿Quiénes somos?</h2>
+      <div class="AboutUs__presentation">
+        <div class="container container--flex">
+          <div class="column column--50">
+            <div class="AboutUs--img">
+              <div class="AboutUs--img--item">
+                <img src="img/Disperlub - Motores 2.jpg" alt="Descripicón de la imagen" loading="lazy">
+              </div>
+              <div class="AboutUs--img--item">
+                <img src="img/Disperlub - la evolución del lubricante para motores.jpg" alt="Descripicón de la imagen" loading="lazy">
+              </div>
+              <div class="AboutUs--img--item">
+                <img src="img/Disperlub - Lubricantes de alto rendimiento.jpg" alt="Descripicón de la imagen" loading="lazy">
+              </div>
+              <div class="AboutUs--img--item">
+                <img src="img/Disperlub - Diferencias en los lubricantes de motores.jpg" alt="Descripicón de la imagen" loading="lazy">
+              </div>
+            </div>
+          </div>
+          <div class="column column--50">
+            <div class="AboutUs--info">
+              <h3 class="sub-titulo">Historia de DISPERLUB</h3>
+              <p class="texto">(Aquí debe de ir un poco de la historia de la empresa como los años que llevan operando, enfoques
+                o empresas a los que van dirigidos la empresa. Deben de ser muy precisos. Se deben mencionar logros clave para llegar
+                hasta donde están ahorita).</p>
+              <p class="texto">(Aquí podremos poner sus su trayectoria laborar y su experiencia en esta rama)</p>
+              <ul>
+                <li class="texto"><b>(Aquí podemos poner experiencia en que o con que empresa)</b></li>
+                <li class="texto"><b>(Aquí podemos poner experiencia en que o con que empresa)</b></li>
+                <li class="texto"><b>(Aquí podemos poner experiencia en que o con que empresa)</b></li>
+                <li class="texto"><b>(Aquí podemos poner experiencia en que o con que empresa)</b></li>
+                <li class="texto"><b>(Aquí podemos poner experiencia en que o con que empresa)</b></li>
+              </ul>
+              <p class="texto">(Se debe de lanzar una propuesta sutil para conseguir más clientes).</p>
+            </div>
+          </div>
+        </div>
+        <div class="AboutUs__presentation--box">
+          <h2 class="titulo">Nuestra misión</h2>
+        <p class="texto">Aquí va puesta la misión de la empresa. Este sería un texto centrado que viene dentro de un rectangulo. 
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, sapiente! Pariatur illo eaque, assumenda harum similique et quasi eligendi hic alias veritatis est non quis in unde saepe voluptas vero?
+        </p>
+        </div>
+        <div class="AboutUs__presentation--box">
+          <h2 class="titulo">Nuestra visión</h2>
+        <p class="texto">Aquí va puesta la misión de la empresa. Este sería un texto centrado que viene dentro de un rectangulo. 
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, sapiente! Pariatur illo eaque, assumenda harum similique et quasi eligendi hic alias veritatis est non quis in unde saepe voluptas vero?
+        </p>
+        </div>
+      </div>
+  </div>
+</section>
+
+<section id="service">
+  <div class="container">
+    <h2 class="titulo">Nuestros servicios</h2>
+    <div class="service__container">
+      <div class="service__container--item">
+        <div class="service__img">
+          <img src="img/Disperlub - Sistema de lubricacion.jpg" alt="Descripicón de la imagen" loading="lazy">
+          <div class="service__txt">
+            <h3 class="sub-titulo">(Aquí va el tipo de servicio)</h3>
+            <p class="texto">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum repellendus veritatis atque eligendi velit ad doloremque aliquam corrupti reiciendis earum!
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="service__container--item">
+        <div class="service__img">
+          <img src="img/Disperlub - Usos de aceites lubricantes.jpg" alt="Descripicón de la imagen" loading="lazy">
+          <div class="service__txt">
+            <h3 class="sub-titulo">(Aquí va el tipo de servicio)</h3>
+            <p class="texto">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum repellendus veritatis atque eligendi velit ad doloremque aliquam corrupti reiciendis earum!
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="service__container--item">
+        <div class="service__img">
+          <img src="img/Disperlub - Importancia de los lubricantes para motores.jpg" alt="Descripicón de la imagen" loading="lazy">
+          <div class="service__txt">
+            <h3 class="sub-titulo">(Aquí va el tipo de servicio)</h3>
+            <p class="texto">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum repellendus veritatis atque eligendi velit ad doloremque aliquam corrupti reiciendis earum!
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="service__container--item">
+        <div class="service__img">
+          <img src="img/Disperlub - Usos de aceites lubricantes.jpg " alt="Descripicón de la imagen" loading="lazy">
+          <div class="service__txt">
+            <h3 class="sub-titulo">(Aquí va el tipo de servicio)</h3>
+            <p class="texto">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum repellendus veritatis atque eligendi velit ad doloremque aliquam corrupti reiciendis earum!
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- 
+
+         <?php foreach ($resultado as $row) { ?>
+ <div class="carousel__item">
+    <?php $id = $row['id'];
+          $imagen = "img/menu/" . $id . "/principal.png";
+
+            if (!file_exists($imagen)) {
+           $imagen = "img/menu/no-photo/principal.png";
+            } ?>
+    <figure>
+    <img loading="lazy" src="<?php echo $imagen; ?>" alt="Producto 1 imagen">
+    <div class="carosuel__item--txt">
+       <div class="txt--item">
+           <h3 class="sub-titulo"><?php echo $row['nombre']; ?></h3>
+           <h4 class="mini-titulo">$ <?php echo number_format($row['precio'], 2, ".", ","); ?></h4>
+           <p class="texto"><?php echo $row['predescripcion']; ?></p>
+           
+           <div class="producto__item--button">
+           <a href="detalles.php?id=<?php echo $row['id']; ?>&token=<?php echo hash_hmac('sha1', $row['id'], KEY_TOKEN); ?>" class="btn btn-primary">Ver Detalles</a>
+          </div> 
+      </div>
+      </div>
+   </figure>
+</div>
+<?php } ?>
+
+       -->
+    </div>
+    <div class="questions">
+      <h3 class="sub-titulo">Preguntas frecuentes</h3>
+      <details> <!--Propiedades a investigar-->
+        <summary class="texto">Preguntas frecuentes <i class="bi bi-caret-up-fill"></i></summary>
+        <p class="texto">La respuesta a algunas preguntas frecuentes</p>
+      </details>
+      <details>
+        <summary class="texto">Preguntas frecuentes <i class="bi bi-caret-up-fill"></i></summary>
+        <p class="texto">La respuesta a algunas preguntas frecuentes</p>
+      </details>
+      <details>
+        <summary class="texto">Preguntas frecuentes <i class="bi bi-caret-up-fill"></i></summary>
+        <p class="texto">La respuesta a algunas preguntas frecuentes</p>
+      </details>
+      <details>
+        <summary class="texto">Preguntas frecuentes <i class="bi bi-caret-up-fill"></i></summary>
+        <p class="texto">La respuesta a algunas preguntas frecuentes</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section id="catalogo">
+  <div class="container">
+    <h2 class="titulo">Nuestro catalogo de productos</h2>
+    <p class="texto">(Una descripcion breve de la calidad de los productos, usos, duración general, etc)</p>
+    <div class="catalogo__container">
+      <div class="container container--flex">
+        <div class="column column--50-25">
+          <div class="catalogo__container--item">
+            <img src="img/Disperlub - Castrol verde.jpeg" alt="Descripicón de la imagen" loading="lazy">
+            <div class="txt">
+              <h3 class="sub-titulo">Producto</h3>
+            <p class="texto">(Descripción detallada del producto sin dar muchas especificaciones. Algo breve para llamar la atención)</p>
+            <a href="">Especificaciones</a>
+            </div>
+          </div>
+        </div>
+        <div class="column column--50-25">
+          <div class="catalogo__container--item">
+            <img src="img/Disperlub - Castrol.jpeg" alt="Descripicón de la imagen" loading="lazy">
+            <div class="txt">
+              <h3 class="sub-titulo">Producto</h3>
+            <p class="texto">(Descripción detallada del producto sin dar muchas especificaciones. Algo breve para llamar la atención)</p>
+            <a href="">Especificaciones</a>
+            </div>
+          </div>
+        </div>
+        <div class="column column--50-25">
+          <div class="catalogo__container--item">
+            <img src="img/Disperlub - Chevron.jpeg" alt="Descripicón de la imagen" loading="lazy">
+            <div class="txt">
+              <h3 class="sub-titulo">Producto</h3>
+            <p class="texto">(Descripción detallada del producto sin dar muchas especificaciones. Algo breve para llamar la atención)</p>
+            <a href="">Especificaciones</a>
+            </div>
+          </div>
+        </div>
+        <div class="column column--50-25">
+          <div class="catalogo__container--item">
+            <img src="img/Disperlub - Mobil negro.jpeg" alt="Descripicón de la imagen" loading="lazy">
+            <div class="txt">
+              <h3 class="sub-titulo">Producto</h3>
+            <p class="texto">(Descripción detallada del producto sin dar muchas especificaciones. Algo breve para llamar la atención)</p>
+            <a href="">Especificaciones</a>
+            </div>
+          </div>
+        </div>
+        <div class="column column--50-25">
+          <div class="catalogo__container--item">
+            <img src="img/Disperlub - Mobil plateado.jpeg" alt="Descripicón de la imagen" loading="lazy">
+            <div class="txt">
+              <h3 class="sub-titulo">Producto</h3>
+            <p class="texto">(Descripción detallada del producto sin dar muchas especificaciones. Algo breve para llamar la atención)</p>
+            <a href="">Especificaciones</a>
+            </div>
+          </div>
+        </div>
+        <div class="column column--50-25">
+          <div class="catalogo__container--item">
+            <img src="img/Disperlub - Mobil.jpeg" alt="Descripicón de la imagen" loading="lazy">
+            <div class="txt">
+              <h3 class="sub-titulo">Producto</h3>
+            <p class="texto">(Descripción detallada del producto sin dar muchas especificaciones. Algo breve para llamar la atención)</p>
+            <a href="">Especificaciones</a>
+            </div>
+          </div>
+        </div>
+        <div class="column column--50-25">
+          <div class="catalogo__container--item">
+            <img src="img/Disperlub - Castrol verde.jpeg" alt="Descripicón de la imagen" loading="lazy">
+            <div class="txt">
+              <h3 class="sub-titulo">Producto</h3>
+            <p class="texto">(Descripción detallada del producto sin dar muchas especificaciones. Algo breve para llamar la atención)</p>
+            <a href="">Especificaciones</a>
+            </div>
+          </div>
+        </div>
+        <div class="column column--50-25">
+          <div class="catalogo__container--item">
+            <img src="img/Disperlub - Chevron.jpeg" alt="Descripicón de la imagen" loading="lazy">
+            <div class="txt">
+              <h3 class="sub-titulo">Producto</h3>
+            <p class="texto">(Descripción detallada del producto sin dar muchas especificaciones. Algo breve para llamar la atención)</p>
+            <a href="">Especificaciones</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <h2 class="titulo">Contactanos</h2> 
+    <div class="container container--flex">
+      <div class="column column--50">
+        <div class="contact__info">
+          <h3 class="sub-titulo">¿Por qué contactarnos?</h3>
+          <p class="texto">Lorem ipsum dolor sit amet consectetur elit. Quos perspiciatis veritatis illum dolorum dolorem quisquam earum quae quam cum blanditiis!</p>
+            <div class="contact__info--links">
+              <span><i class="bi bi-geo-alt-fill"></i> RIO DUERO 448, HEROES, 84030,  Sonora</span>
+              <span><i class="bi bi-telephone-forward-fill"></i> 55-555-555</span>
+              <span><a href="mailto:contacto@mariodsgn.com"><i class="bi bi-envelope-at-fill"></i> contacto@disperlub.com</a></span>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d235.17612579834903!2d-99.14275425242306!3d19.42026756040948!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e0!3m2!1ses!2smx!4v1709705070956!5m2!1ses!2smx" width="50" height="50" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+      </div>
+      <div class="column column--50">
+        <h3 class="sub-titulo">Escribenos</h3>
+        <div class="contact__form">
+          <form action="" method="post" enctype="multipart/form-data">
+            <label for="" class="contact__form--label">Nombre: </label>
+            <input type="text" class="contact__form--input" required placeholder="Nombre completo">
+            <label for="" class="contact__form--label">Correo: </label>
+            <input type="text" class="contact__form--input" required placeholder="Ejemplo: JPérez@minegocio.com">
+            <label for="" class="contact__form--label">Teléfono: </label>
+            <input type="text" class="contact__form--input" required placeholder="Celular o fijo">
+            <label for="" class="contact__form--label">Mensaje: </label>
+            <textarea name="" id="" cols="30" rows="10" class="contact__form--textarea" required placeholder="El motivo del mensaje"></textarea>
+            <button type="submit">Enviar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="container container--flex">
+      <div class="column column--33">
+        <h4 class="mini-titulo">¿Por qué elegirnos?</h3>
+        <p class="texto">(Descripción breve de todos los motivos por los que se deben de contatcar lorem ipsum dolor)</p>
+      </div>
+      <div class="column column--33">
+        <h4 class="mini-titulo">Números de contacto</h4>
+        <div class="footer__links">
+          <span><i class="bi bi-telephone-forward-fill"></i> 55-555-555</span>
+          <span><i class="bi bi-telephone-forward-fill"></i> 66-666-666</span>
+          <span><i class="bi bi-telephone-forward-fill"></i> 77-777-777</span>
+        </div>
+      </div>
+      <div class="column column--33">
+        <h4 class="mini-titulo">Redes sociales</h4>
+        <div class="footer__links">
+          <span>
+            <a href=""><i class="bi bi-instagram"></i> Instagram</a>
+          </span>
+          <span>
+            <a href=""><i class="bi bi-facebook"></i> Facebook</a>
+          </span>
+          <span>
+            <a href=""><i class="bi bi-linkedin"></i> Linkedin</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<div class="copy">
+  <p class="texto">Copyright &copy; 2024 por <a href="http://www.mariodsgn.com">Mario Design</a> | Todos los derechos reservados</p>
+</div>
+<!-------------------------------------------- ITEM PROPMP ------------------------------------------ -->
+
+<div itemtype="https://schema.org/Product" itemscope>
+      <meta itemprop="name" content="Mario Alberto Áñvarez Martínez" />
+      <meta itemprop="description" content="¿Quiéres llevar tu negocio al mundo del internét pero no sabes como hacerló? Aquí encontrarás la solución. Mi nombre es Mario y soy diseñador y desarrollador web." />
+      <div itemprop="aggregateRating" itemtype="https://schema.org/AggregateRating" itemscope>
+        <meta itemprop="reviewCount" content="89" />
+        <meta itemprop="ratingValue" content="4.4" />
+      </div>
+      <div itemprop="review" itemtype="https://schema.org/Review" itemscope>
+        <div itemprop="author" itemtype="https://schema.org/Person" itemscope>
+          <meta itemprop="name" content="Mario Alberto Álvarez Martínez" />
+        </div>
+        <div itemprop="reviewRating" itemtype="https://schema.org/Rating" itemscope>
+          <meta itemprop="ratingValue" content="4" />
+          <meta itemprop="bestRating" content="5" />
+        </div>
+      </div>
+ </div>
+</body>
+<script src="js/menu.js"></script>
+<script src="js/slider.js"></script>
+<script src="js/particles.min.js"></script>
+<script>
+  particlesJS(
+    {
+  "particles": {
+    "number": {
+      "value": 80,
+      "density": {
+        "enable": true,
+        "value_area": 800
+      }
+    },
+    "color": {
+      "value": "#a10303"
+    },
+    "shape": {
+      "type": "circle",
+      "stroke": {
+        "width": 0,
+        "color": "#000000"
+      },
+      "polygon": {
+        "nb_sides": 5
+      },
+      "image": {
+        "src": "img/github.svg",
+        "width": 100,
+        "height": 100
+      }
+    },
+    "opacity": {
+      "value": 0.5,
+      "random": false,
+      "anim": {
+        "enable": false,
+        "speed": 1,
+        "opacity_min": 0.1,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": 3,
+      "random": true,
+      "anim": {
+        "enable": false,
+        "speed": 40,
+        "size_min": 0.1,
+        "sync": false
+      }
+    },
+    "line_linked": {
+      "enable": true,
+      "distance": 150,
+      "color": "#a10303",
+      "opacity": 0.928,
+      "width": 1
+    },
+    "move": {
+      "enable": true,
+      "speed": 1,
+      "direction": "none",
+      "random": false,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": false,
+      "attract": {
+        "enable": false,
+        "rotateX": 600,
+        "rotateY": 1200
+      }
+    }
+  },
+  "interactivity": {
+    "detect_on": "window",
+    "events": {
+      "onhover": {
+        "enable": false,
+        "mode": "repulse"
+      },
+      "onclick": {
+        "enable": false,
+        "mode": "bubble"
+      },
+      "resize": true
+    },
+    "modes": {
+      "grab": {
+        "distance": 400,
+        "line_linked": {
+          "opacity": 1
+        }
+      },
+      "bubble": {
+        "distance": 400,
+        "size": 40,
+        "duration": 2,
+        "opacity": 8,
+        "speed": 3
+      },
+      "repulse": {
+        "distance": 200,
+        "duration": 0.4
+      },
+      "push": {
+        "particles_nb": 4
+      },
+      "remove": {
+        "particles_nb": 2
+      }
+    }
+  },
+  "retina_detect": true
+}
+  )
+</script>
+</html>
